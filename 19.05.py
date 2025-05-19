@@ -45,6 +45,40 @@ def remove_vowels(text):
             result+=i
     print(result)
 
+def file_handling(name):
+    with open("names.txt","a") as f:
+        f.write(f"{name}""\n")
+
+def exeption_handling():
+    try:
+        num = input("Input number :")
+        number = int(num)
+        result = 10 / number
+        print(num)
+    except ValueError:
+        print("Its not valid number, Please enter numeric value")
+    except ZeroDivisionError:
+        print("Cannot divide by zero")
+
+class rectangle:
+    def __init__(self):
+        self.__height = 0
+        self.__width = 0
+    
+    def set_height(self,height):
+        self.__height = height
+
+    def set_width(self,width):
+        self.__width = width
+
+    def area(self):
+        return self.__width * self.__height
+        
+
+
+
+        
+    
     
 if __name__ == "__main__":
     # txt = input("Input number: ")
@@ -60,6 +94,13 @@ if __name__ == "__main__":
     # sorted_dict(scores)
     # text = "Hello World"
     # remove_vowels(text)
+    # name = input("What is your name :")
+    # file_handling(name)
+    # exeption_handling()
+    obj = rectangle()
+    obj.set_height(15)
+    obj.set_width(10)
+    print(obj.area())
 
 
 
